@@ -1,4 +1,9 @@
-// Serviço de Locação (Sem Interface)
+// Serviço de Locação (Com Interface)
+// -----------------------------------------------------------------------------------------------------------------
+// Com a implementação da Interface, o Serviço de Locação não precisa explicitamente saber quais as regras serão 
+// aplicadas para definição dos Impostos, com isso caso mude as regras, não haverá qualquer alteração nesta classe
+// uma vez que a mesma utiliza uma Interface Genérica
+// -----------------------------------------------------------------------------------------------------------------
 // Este serviço é composto pelo serviço de Impostos Brasileiro
 // Declaro os atributos dos serviços Locação e Impostos Brasileiros
 // Crio os metodos para geração da fatura
@@ -13,9 +18,9 @@ public class RentalService {
 	private double pricePerDay;
 	private double pricePerHour;
 	
-	private BrazilTaxService taxService;
+	private TaxService taxService;
 
-	public RentalService(double pricePerDay, double pricePerHour, BrazilTaxService taxService) {
+	public RentalService(double pricePerDay, double pricePerHour, TaxService taxService) {
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;
 		this.taxService = taxService;
