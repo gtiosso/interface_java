@@ -1,0 +1,16 @@
+// Serviço de Impostaos Brasileiros (Sem Interface)
+// Declaro o metodo para calcular os impostos para geração da Fatura
+
+package model.services;
+
+public class BrazilTaxService {
+
+	public double tax(double amount) {
+		if (amount <= 100.0) {
+			return amount * 0.2;
+		}
+		else {
+			return amount * 0.15;
+		}
+	}
+}
