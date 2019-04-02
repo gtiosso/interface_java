@@ -20,6 +20,8 @@ public class RentalService {
 	
 	private TaxService taxService;
 
+	// Implementando a "Injeção de Dependência" por meio do construtor
+	// Injetando a dependência da Interface de Serviços de Imposto
 	public RentalService(double pricePerDay, double pricePerHour, TaxService taxService) {
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;

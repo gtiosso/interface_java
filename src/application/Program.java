@@ -37,6 +37,7 @@ public class Program {
 		// Declaro explicitamente o tipo de serviço de imposto que será utilizado
 		// Como BrazilTaxService se trata de um subtipo da Interface TaxService, é realizado um UPCASTING,
 		// pois no serviço de locação de carros está definido o tipo de objeto TaxService
+		// Ou seja, está realizando uma "Injeção de Dependência" por meio de construtor
 		RentalService rentalService = new RentalService(pricePerDay, pricePerHour, new BrazilTaxService());
 		
 		rentalService.processInvoice(carRental);
